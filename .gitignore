@@ -1,0 +1,7 @@
+# Dataset - images
+/all_data/*/*/images
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+.DS_Store
