@@ -41,8 +41,6 @@ valid_input_data.columns = ["id", "semtypes"]
 valid_target_data = pd.read_csv(valid_target_file, sep="\t", header=None)
 valid_target_data.columns = ["id", "caption"]
 
-# only the first 0.1% of the data for testing
-
 portion = config.portion
 
 train_input_data = train_input_data[: int(len(train_input_data) * portion)]
@@ -202,5 +200,5 @@ for _, row in input_data.iterrows():
 
 
 res = pd.DataFrame(res)
-res.to_csv("./results.csv", index=False)
-print(f"Results saved in ./results.csv")
+res.to_csv("./t5_results.csv", index=False)
+print(f"Results saved in ./t5_results.csv")

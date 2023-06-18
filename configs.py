@@ -10,6 +10,11 @@ class Configs:
         self.test_input_file = self.base_path + "test/radiology/semtypes.txt"
         self.test_target_file = self.base_path + "test/radiology/captions.txt"
         
+        self.train_image_dir = self.base_path + "train/radiology/images/"
+        self.train_image_data_file = self.base_path + "train/radiology/traindata.csv"
+        
+        self.llm_data_file = self.base_path + "llm_result.txt"
+        
         self.num_train_epochs = 5
         self.batch_size = 8
         self.learning_rate = 1e-4
@@ -17,3 +22,12 @@ class Configs:
         
         self.pretrained_model = "t5-base"
         self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        
+        self.image_encoder_model = "google/vit-base-patch16-224-in21k"
+        self.text_decoder_model = "gpt2"
+        self.max_target_length = 256
+
+        self.train_data_percentage = 60
+        self.valid_data_percentage = 60
+        self.test_data_percentage = 60
+        self.test_valid_percentage = 30
